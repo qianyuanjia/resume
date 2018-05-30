@@ -2,7 +2,6 @@
 	let view=document.querySelectorAll('.slide-up');
 	let controller={
 		view:null,
-		oLoadingWrap:null,
 		init:function(view){
 			this.view=view;
 			this.oLoadingWrap=document.getElementById('loading_wrap');

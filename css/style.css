@@ -354,7 +354,7 @@ body.init{
 .Img{
 	max-width: 940px;
 	margin:0 auto;
-	padding-bottom: 400px;
+	margin-bottom: 80px;
 }
 .Img .slide-up{
 	position: relative;
@@ -391,6 +391,72 @@ body.init{
 	opacity: 0;
 }
 
+.messages{
+	max-width: 940px;
+	margin:0 auto;
+}
+
+#messageForm label{
+	color: #333333;
+	font-weight: bold;
+	display: block;
+	padding: 10px;
+}
+
+#messageForm input[type=text],
+#messageForm textarea
+{
+	padding: 7px 14px;
+	border: none;
+	border: 1px solid #CCCCCC;
+	border-radius: 6px;
+	outline: none;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+#messageForm input[type=text]:focus,
+#messageForm textarea:focus{
+	border-color: #66AFE9;
+}
+#messageForm textarea{
+	height: 100px;
+	resize: none;
+	margin-bottom: 14px;
+}
+.btns{
+	margin-bottom: 32px;
+}
+#messageForm input[type=submit],
+#messageForm input[type=reset]{
+	padding: 6px 14px;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	border-radius: 6px;
+	margin-left: 15px;
+	float: right;
+	background: #57B257;
+	cursor: pointer;
+}
+#messageForm input[type=reset]{
+	background: #C63632;
+}
+.showMessages{
+	border-bottom: 1px solid #ccc;
+}
+.showMessages li{
+	border: 1px solid #ccc;
+	padding: 15px;
+	border-bottom: none;
+	background: #fff;
+}
+.showMessages li:hover{
+	background: #f1f1f1;
+}
+footer{
+	height: 100px;
+}
 .swiper-container {
     width: 600px;
     height: 450px;
@@ -406,7 +472,6 @@ body.init{
 	bottom: 0;
 	margin: auto;
 }
-
 
 
 

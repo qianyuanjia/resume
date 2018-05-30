@@ -2,8 +2,6 @@
 	let view=document.querySelectorAll('.topNav .nav>li>a[href|="#site"]');
 	let controller={
 		view:null,
-		minAct:undefined,
-		aAnchorEle:null,
 		init:function(view){
 			this.view=view;
 			this.minAct=0;
@@ -14,7 +12,7 @@
 			window.addEventListener('scroll',this.slideNavBar.bind(this));
 		},
 		slideNavBar:function(){
-			for(let i=0;i<this.aAnchorEle.length;i++){
+			for(let i=0;i<this.view.length;i++){
 				if(Math.abs(this.aAnchorEle[i].getBoundingClientRect().top)<Math.abs(this.aAnchorEle[this.minAct].getBoundingClientRect().top)){
 					this.view[this.minAct].parentNode.classList.remove('active');
 					this.minAct=i;

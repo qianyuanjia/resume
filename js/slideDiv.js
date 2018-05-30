@@ -2,13 +2,9 @@
 	let view=document.querySelectorAll('.slide-up');
 	let controller={
 		view:null,
-		len:undefined,
-		docHeight:undefined,
-		lastScrollY:undefined,
-		currentScrollY:undefined,
 		init:function(view){
 			this.view=view;
-			this.len=document.querySelectorAll('[id |= site]').length;
+			this.len=view.length;
 			this.docHeight=document.documentElement.clientHeight || document.body.clientHeight;
 			this.lastScrollY=0;
 			this.currentScrollY=0;

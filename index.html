@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>个人简历</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.0/css/swiper.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<script src="//at.alicdn.com/t/font_665629_gbjlvkc5m7odpldi.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.0/js/swiper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
 </head>
 <body class="init">
 	<div class="show" id="loading_wrap">
@@ -163,11 +163,29 @@
 			    <div class="swiper-button-next"></div>
 		</div>		
 	</div>
+
+	<h3 class="title" id="site-Message">留言</h3>
+	<section class="messages">
+		<form action="###" id="messageForm">
+			<label for="who">姓名</label>
+			<input type="text" name="who" id="who">
+			<label for="ta">留言</label>
+			<textarea name="words" id="ta"></textarea>
+			<div class="btns clearfix">			
+				<input type="submit" value="提交">	
+				<input type="reset" value="清空">	
+			</div>
+		</form>
+		<ul class="showMessages"></ul>
+	</section>
+	<footer></footer>
+	<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.7.0/dist/av-min.js"></script>
 	<script src="./js/initial.js"></script>
 	<script src="./js/slideDiv.js"></script>
 	<script src="./js/slideNavBar.js"></script>
 	<script src="./js/stickytop.js"></script>
 	<script src="./js/easescroll.js"></script>
 	<script src="./js/swiper.js"></script>
+	<script src="./js/message.js"></script>
 </body>
 </html>

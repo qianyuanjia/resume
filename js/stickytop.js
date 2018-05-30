@@ -2,7 +2,6 @@
 	let view=document.querySelector('.topNav');
 	let controller={
 		view:null,
-		currentScrollY:undefined,
 		init:function(view){
 			this.view=view;
 			this.currentScrollY=window.scrollY;
