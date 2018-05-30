@@ -3,7 +3,7 @@
 	let controller={
 		view:null,
 		currentScrollY:undefined,
-		init:function(){
+		init:function(view){
 			this.view=view;
 			this.currentScrollY=window.scrollY;
 			this.bindEvents();
@@ -20,5 +20,5 @@
 			}
 		}
 	}
-	controller.init();
+	controller.init(view);
 }.call()

@@ -2,7 +2,7 @@
     let view = document.querySelectorAll('.topNav .nav>li>a[href|="#site"]');
     let controller = {
         view: null,
-        init: function () {
+        init: function (view) {
             this.view = view;
             this.tweeninit();
             this.bindEvents();
@@ -36,7 +36,7 @@
         }
     }
 
-    controller.init();
+    controller.init(view);
 
 }.call()
 

@@ -4,7 +4,7 @@
 		view:null,
 		minAct:undefined,
 		aAnchorEle:null,
-		init:function(){
+		init:function(view){
 			this.view=view;
 			this.minAct=0;
 			this.aAnchorEle=document.querySelectorAll('[id |= site]');
@@ -26,5 +26,5 @@
 		}
 	}
 
-	controller.init();
+	controller.init(view);
 }.call()

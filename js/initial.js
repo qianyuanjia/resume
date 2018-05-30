@@ -3,7 +3,7 @@
 	let controller={
 		view:null,
 		oLoadingWrap:null,
-		init:function(){
+		init:function(view){
 			this.view=view;
 			this.oLoadingWrap=document.getElementById('loading_wrap');
 			this.openRS();
@@ -18,5 +18,5 @@
 		}
 	}
 
-	controller.init();
+	controller.init(view);
 }.call()

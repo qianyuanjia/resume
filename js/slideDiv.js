@@ -6,7 +6,7 @@
 		docHeight:undefined,
 		lastScrollY:undefined,
 		currentScrollY:undefined,
-		init:function(){
+		init:function(view){
 			this.view=view;
 			this.len=document.querySelectorAll('[id |= site]').length;
 			this.docHeight=document.documentElement.clientHeight || document.body.clientHeight;
@@ -35,7 +35,7 @@
 			this.lastScrollY=this.currentScrollY;
 		}
 	}
-	controller.init();
+	controller.init(view);
 }.call()
 
 
