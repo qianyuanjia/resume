@@ -3,7 +3,9 @@
     let controller = {
         view: null,
         init: function () {
-            this.view = view
+            this.view = view;
+            this.tweeninit();
+            this.bindEvents();
         },
         tweeninit: function () {
             function animate(time) {
@@ -35,8 +37,6 @@
     }
 
     controller.init();
-    controller.tweeninit();
-    controller.bindEvents();
 
 }.call()
 

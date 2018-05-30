@@ -8,6 +8,7 @@
 			this.view=view;
 			this.minAct=0;
 			this.aAnchorEle=document.querySelectorAll('[id |= site]');
+			this.bindEvents();
 		},
 		bindEvents:function(){
 			window.addEventListener('scroll',this.slideNavBar.bind(this));
@@ -26,5 +27,4 @@
 	}
 
 	controller.init();
-	controller.bindEvents();
 }.call()

@@ -6,6 +6,7 @@
 		init:function(){
 			this.view=view;
 			this.currentScrollY=window.scrollY;
+			this.bindEvents();
 		},
 		bindEvents:function(){		
 			window.addEventListener('scroll',this.stickyTop.bind(this));
@@ -20,5 +21,4 @@
 		}
 	}
 	controller.init();
-	controller.bindEvents();
 }.call()

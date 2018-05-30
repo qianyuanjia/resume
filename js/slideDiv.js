@@ -12,6 +12,7 @@
 			this.docHeight=document.documentElement.clientHeight || document.body.clientHeight;
 			this.lastScrollY=0;
 			this.currentScrollY=0;
+			this.bindEvents();
 		},
 		bindEvents:function(){
 			window.addEventListener('scroll',this.slideDiv.bind(this));
@@ -35,7 +36,6 @@
 		}
 	}
 	controller.init();
-	controller.bindEvents();
 }.call()
 
 

@@ -6,6 +6,7 @@
 		init:function(){
 			this.view=view;
 			this.oLoadingWrap=document.getElementById('loading_wrap');
+			this.openRS();
 		},
 		openRS:function(){
 			setTimeout(function(){
@@ -18,5 +19,4 @@
 	}
 
 	controller.init();
-	controller.openRS();
 }.call()
