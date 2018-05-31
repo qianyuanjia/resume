@@ -1,9 +1,8 @@
 !function(){
-	let view=document.querySelectorAll('.topNav .nav>li>a[href|="#site"]');
-	let controller={
-		view:null,
-		init:function(view){
-			this.view=view;
+	let view=View('.topNav .nav');
+	let options={
+		init:function(){
+			this.aA=view.querySelectorAll('a[href|="#site"]');
 			this.minAct=0;
 			this.aAnchorEle=document.querySelectorAll('[id |= site]');
 			this.bindEvents();
@@ -12,17 +11,18 @@
 			window.addEventListener('scroll',this.slideNavBar.bind(this));
 		},
 		slideNavBar:function(){
-			for(let i=0;i<this.view.length;i++){
+			for(let i=0;i<this.aA.length;i++){
 				if(Math.abs(this.aAnchorEle[i].getBoundingClientRect().top)<Math.abs(this.aAnchorEle[this.minAct].getBoundingClientRect().top)){
-					this.view[this.minAct].parentNode.classList.remove('active');
+					this.aA[this.minAct].parentNode.classList.remove('active');
 					this.minAct=i;
 				}
 			}
-			if(this.view[this.minAct].parentNode.className.indexOf('active')==-1){
-				this.view[this.minAct].parentNode.classList.add('active');
+			if(this.aA[this.minAct].parentNode.className.indexOf('active')==-1){
+				this.aA[this.minAct].parentNode.classList.add('active');
 			}
 		}
 	}
-
-	controller.init(view);
+	let controller=Controller(view,null,options);
+	controller.init();
+	
 }.call()

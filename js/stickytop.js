@@ -1,9 +1,7 @@
 !function(){	
-	let view=document.querySelector('.topNav');
-	let controller={
-		view:null,
-		init:function(view){
-			this.view=view;
+	let view=View('.topNav');
+	let options={
+		init:function(){
 			this.currentScrollY=window.scrollY;
 			this.bindEvents();
 		},
@@ -19,5 +17,7 @@
 			}
 		}
 	}
-	controller.init(view);
+	let controller=Controller(view,null,options);
+	controller.init();
+
 }.call()
